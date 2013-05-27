@@ -30,7 +30,7 @@ async.waterfall([
   function draw(png, next) {
     var start = Date.now();
     console.log('draw: %dms', Date.now()-start);
-    png.drawLine(10, 10, 100, 60, new Color(0, 255, 0), 10);
+    png.line(10, 10, 100, 60, new Color(0, 255, 0), 10);
     next(null, png);
   },
   function encode(png, next) {
